@@ -6,6 +6,6 @@ class UsersController < ApplicationController
     @user = User.all
     @user = User.find(params[:id])
     @prototype = Prototype.all 
-    @prototypes = @prototype.includes(:user)
+    @prototypes = @user.prototypes
   end
 end
